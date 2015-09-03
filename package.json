@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "mocha": "2.3.0"
+  },
+  "scripts": {
+    "test": "make test"
   }
 }

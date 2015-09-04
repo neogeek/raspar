@@ -1,3 +1,5 @@
+var expect = require('chai').expect;
+
 var lib = process.env.COVERAGE ? '../../lib-cov' : '../../lib';
 
 var raspar = require(lib + '/raspar');

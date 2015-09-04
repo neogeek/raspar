@@ -18,7 +18,19 @@ describe('raspar', function () {
 
     it('should make as basic request (cached)', function (done) {
 
-        raspar.get(['http://google.com/humans.txt']).done(function (content) {
+        raspar.get('http://google.com/humans.txt').done(function (content) {
+
+            done();
+
+        });
+
+    });
+
+    it('should make as basic request for an array of URLs', function (done) {
+
+        raspar.get(['http://google.com/humans.txt']).done(function (contents) {
+
+            expect(contents).to.have.length(1);
 
             done();
 

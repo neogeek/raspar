@@ -10,6 +10,8 @@ describe('raspar', function () {
 
         raspar.get('http://google.com/humans.txt').done(function (content) {
 
+            expect(content).to.not.have.property('cache');
+
             done();
 
         });
@@ -19,6 +21,8 @@ describe('raspar', function () {
     it('should make as basic request (cached)', function (done) {
 
         raspar.get('http://google.com/humans.txt').done(function (content) {
+
+            expect(content).to.have.property('cache');
 
             done();
 

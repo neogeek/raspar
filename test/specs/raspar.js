@@ -6,6 +6,12 @@ var raspar = require(lib + '/raspar');
 
 describe('raspar', function () {
 
+    before(function () {
+
+        raspar.debug = true;
+
+    });
+
     it('should make as basic request', function (done) {
 
         raspar.get('http://google.com/humans.txt').done(function (content) {

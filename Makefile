@@ -1,15 +1,20 @@
+BIN=node_modules/.bin
+
 test:
-	rm -rf ./temp/
-	./node_modules/.bin/mocha ./test/specs/**.js
-	rm -rf ./temp/
+	@make clean
+	$(BIN)/mocha ./test/specs/**.js
+	@make clean
 
 coverage:
-	./node_modules/.bin/jscoverage lib lib-cov
-	rm -rf ./temp/
-	COVERAGE=1 ./node_modules/.bin/mocha ./test/specs/**.js -R html-cov > coverage.html || exit 0;
-	rm -rf ./temp/
-	COVERAGE=1 ./node_modules/.bin/mocha ./test/specs/**/*.js -R mocha-reporter-cov-summary || exit 0;
-	rm -rf lib-cov
-	rm -rf ./temp/
+	$(BIN)/jscoverage lib lib-cov
+	@make clean
+	COVERAGE=1 $(BIN)/mocha ./test/specs/**.js -R html-cov > coverage.html || exit 0;
+	@make clean
+	COVERAGE=1 $(BIN)/mocha ./test/specs/**/*.js -R mocha-reporter-cov-summary || exit 0;
+	@make clean
+	rm -rf ./lib-cov/
+
+clean:
+	@rm -rf ./temp/ || exit 0;
 
 .PHONY: test

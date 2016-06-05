@@ -48,6 +48,30 @@ describe('raspar', function () {
 
     });
 
+    it('should make as basic request and return an HTML object', function (done) {
+
+        raspar.get('http://google.com/').done(function (content) {
+
+            expect(content).to.have.property('$body');
+
+            done();
+
+        });
+
+    });
+
+    it('should make as basic request for an array of URLs and return an HTML object', function (done) {
+
+        raspar.get(['http://google.com/']).done(function (contents) {
+
+            expect(contents[0]).to.have.property('$body');
+
+            done();
+
+        });
+
+    });
+
     it('should error on invalid URL', function (done) {
 
         raspar.get('test').catch(function (err) {

@@ -7,7 +7,7 @@
 ```javascript
 var raspar = require('raspar');
 
-raspar.get('http://www.google.com/humans.txt').done(function (content) {
+raspar.get('http://www.google.com/humans.txt').then(function (content) {
 
     console.log(content);
 
@@ -17,7 +17,7 @@ raspar.get('http://www.google.com/humans.txt').done(function (content) {
 ```javascript
 var raspar = require('raspar');
 
-raspar.get(['http://www.google.com/humans.txt']).done(function (contents) {
+raspar.get(['http://www.google.com/humans.txt']).then(function (contents) {
 
     console.log(contents[0]);
 

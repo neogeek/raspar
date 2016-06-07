@@ -1,34 +1,28 @@
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 
-var lib = process.env.COVERAGE ? '../../lib-cov' : '../../lib';
+let lib = '../../lib';
 
-var raspar = require(lib + '/raspar');
+if (process.env.COVERAGE) {
 
-describe('raspar', function () {
+    lib = '../../lib-cov';
 
-    before(function () {
+}
+
+const raspar = require(`${lib}/raspar`);
+
+describe('raspar', () => {
+
+    before(() => {
 
         raspar.debug = true;
 
     });
 
-    it('should make as basic request', function (done) {
+    it('should make as basic request', (done) => {
 
-        raspar.get('http://google.com/humans.txt').done(function (content) {
+        raspar.get('http://google.com/humans.txt').then((content) => {
 
-            expect(content).to.not.have.property('cache');
-
-            done();
-
-        });
-
-    });
-
-    it('should make as basic request (cached)', function (done) {
-
-        raspar.get('http://google.com/humans.txt').done(function (content) {
-
-            expect(content).to.have.property('cache');
+            expect(content).to.not.have.property('cached');
 
             done();
 
@@ -36,9 +30,21 @@ describe('raspar', function () {
 
     });
 
-    it('should make as basic request for an array of URLs', function (done) {
+    it('should make as basic request (cached)', (done) => {
 
-        raspar.get(['http://google.com/humans.txt']).done(function (contents) {
+        raspar.get('http://google.com/humans.txt').then((content) => {
+
+            expect(content).to.have.property('cached');
+
+            done();
+
+        });
+
+    });
+
+    it('should make as basic request for an array of URLs', (done) => {
+
+        raspar.get(['http://google.com/humans.txt']).then((contents) => {
 
             expect(contents).to.have.length(1);
 
@@ -48,33 +54,9 @@ describe('raspar', function () {
 
     });
 
-    it('should make as basic request and return an HTML object', function (done) {
+    it('should error on invalid URL', (done) => {
 
-        raspar.get('http://google.com/').done(function (content) {
-
-            expect(content).to.have.property('$body');
-
-            done();
-
-        });
-
-    });
-
-    it('should make as basic request for an array of URLs and return an HTML object', function (done) {
-
-        raspar.get(['http://google.com/']).done(function (contents) {
-
-            expect(contents[0]).to.have.property('$body');
-
-            done();
-
-        });
-
-    });
-
-    it('should error on invalid URL', function (done) {
-
-        raspar.get('test').catch(function (err) {
+        raspar.get('test').catch(() => {
 
             done();
 

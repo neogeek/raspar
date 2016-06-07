@@ -1,7 +1,7 @@
 BIN=node_modules/.bin
 
 test:
-	# make lint
+	make lint
 	@make clean
 	$(BIN)/mocha ./test/specs/**.js
 	@make clean
@@ -28,6 +28,5 @@ setup:
 
 clean:
 	@rm -rf ./temp/ || exit 0;
-	echo "test"
 
 .PHONY: test

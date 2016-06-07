@@ -12,12 +12,6 @@ const raspar = require(`${lib}/raspar`);
 
 describe('raspar', () => {
 
-    before(() => {
-
-        raspar.debug = true;
-
-    });
-
     it('should make as basic request', (done) => {
 
         raspar.get('http://google.com/humans.txt').then((content) => {

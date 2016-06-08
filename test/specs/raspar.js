@@ -27,10 +27,10 @@ describe('raspar', () => {
     it('should make as basic request (cached)', (done) => {
 
         raspar.get('http://google.com/humans.txt', {
-            'cacheDirectory': false
+            'cacheDirectory': 'temp/cache/'
         }).then((content) => {
 
-            // expect(content).to.have.property('cached');
+            expect(content).to.have.property('cached');
 
             done();
 

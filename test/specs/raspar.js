@@ -12,7 +12,7 @@ const raspar = require(`${lib}/raspar`);
 
 describe('raspar', () => {
 
-    it('should make as basic request', (done) => {
+    it('should make as basic request (caching in temp file)', (done) => {
 
         raspar.get('http://google.com/humans.txt').then((content) => {
 
@@ -24,10 +24,38 @@ describe('raspar', () => {
 
     });
 
-    it('should make as basic request (cached)', (done) => {
+    it('should make as basic request (cached in temp file)', (done) => {
 
         raspar.get('http://google.com/humans.txt', {
             'cacheDirectory': 'temp/cache/'
+        }).then((content) => {
+
+            expect(content).to.have.property('cached');
+
+            done();
+
+        });
+
+    });
+
+    it('should make as basic request (caching in memory)', (done) => {
+
+        raspar.get('http://google.com/humans.txt', {
+            'cacheMemory': true
+        }).then((content) => {
+
+            expect(content).to.not.have.property('cached');
+
+            done();
+
+        });
+
+    });
+
+    it('should make as basic request (cached in memory)', (done) => {
+
+        raspar.get('http://google.com/humans.txt', {
+            'cacheMemory': true
         }).then((content) => {
 
             expect(content).to.have.property('cached');

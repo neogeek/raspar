@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "cache-manager": "2.1.2",
     "es6-promisify": "4.1.0",
     "mkdirp": "0.5.1",
     "request": "2.72.0"

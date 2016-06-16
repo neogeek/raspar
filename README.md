@@ -5,9 +5,9 @@
 ## Usage
 
 ```javascript
-var raspar = require('raspar');
+const raspar = require('raspar');
 
-raspar.get('http://www.google.com/humans.txt').then(function (content) {
+raspar.get('http://www.google.com/humans.txt').then((content) => {
 
     console.log(content);
 
@@ -15,9 +15,9 @@ raspar.get('http://www.google.com/humans.txt').then(function (content) {
 ```
 
 ```javascript
-var raspar = require('raspar');
+const raspar = require('raspar');
 
-raspar.get(['http://www.google.com/humans.txt']).then(function (contents) {
+raspar.get(['http://www.google.com/humans.txt']).then((contents) => {
 
     console.log(contents[0]);
 

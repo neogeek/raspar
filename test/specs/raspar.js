@@ -66,6 +66,28 @@ describe('raspar', () => {
 
     });
 
+    it('should make as basic request (expired cached in temp file)', (done) => {
+
+        raspar.get('http://www.google.com/robots.txt', {
+            'ttl': 1
+        }).then(() => {
+
+            setTimeout(() => {
+
+                raspar.requestFromCache('http://www.google.com/robots.txt', {
+                    'ttl': 1
+                }).catch(() => {
+
+                    done();
+
+                });
+
+            }, 1500);
+
+        });
+
+    });
+
     it('should make as basic request (expired cached in memory)', (done) => {
 
         raspar.get('http://www.google.com/robots.txt', {

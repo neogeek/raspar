@@ -66,6 +66,21 @@ describe('raspar', () => {
 
     });
 
+    it('should make as basic request (no cache)', (done) => {
+
+        raspar.get('http://google.com/humans.txt', {
+            'cacheDirectory': false,
+            'cacheMemory': false
+        }).then((content) => {
+
+            expect(content).to.not.have.property('cached');
+
+            done();
+
+        });
+
+    });
+
     it('should make as basic request for an array of URLs', (done) => {
 
         raspar.get(['http://google.com/humans.txt']).then((contents) => {

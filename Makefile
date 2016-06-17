@@ -3,7 +3,7 @@ BIN=node_modules/.bin
 test:
 	make lint
 	@make clean
-	$(BIN)/mocha ./test/specs/**.js
+	$(BIN)/mocha ./test/specs/**.js -t 3000
 	@make clean
 
 lint:
@@ -15,9 +15,9 @@ coverage:
 	$(BIN)/spire-of-babel ./lib/raspar.js > ./lib-es5/raspar.js
 	$(BIN)/jscoverage lib-es5 lib-cov
 	@make clean
-	COVERAGE=1 $(BIN)/mocha ./test/specs/**.js -R html-cov > coverage.html || exit 0;
+	COVERAGE=1 $(BIN)/mocha ./test/specs/**.js -t 3000 -R html-cov > coverage.html || exit 0;
 	@make clean
-	COVERAGE=1 $(BIN)/mocha ./test/specs/**/*.js -R mocha-reporter-cov-summary || exit 0;
+	COVERAGE=1 $(BIN)/mocha ./test/specs/**/*.js -t 3000 -R mocha-reporter-cov-summary || exit 0;
 	@make clean
 	rm -rf ./lib-cov/
 	rm -rf ./lib-es5/

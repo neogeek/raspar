@@ -66,6 +66,30 @@ describe('raspar', () => {
 
     });
 
+    it('should make as basic request (expired cached in memory)', (done) => {
+
+        raspar.get('http://www.google.com/robots.txt', {
+            'ttl': 1,
+            'cacheMemory': true
+        }).then(() => {
+
+            setTimeout(() => {
+
+                raspar.requestFromCache('http://www.google.com/robots.txt', {
+                    'ttl': 1,
+                    'cacheMemory': true
+                }).catch(() => {
+
+                    done();
+
+                });
+
+            }, 1500);
+
+        });
+
+    });
+
     it('should make as basic request (no cache)', (done) => {
 
         raspar.get('http://google.com/humans.txt', {
@@ -83,9 +107,12 @@ describe('raspar', () => {
 
     it('should make as basic request for an array of URLs', (done) => {
 
-        raspar.get(['http://google.com/humans.txt']).then((contents) => {
+        raspar.get([
+            'http://google.com/humans.txt',
+            'http://google.com/robots.txt'
+        ]).then((contents) => {
 
-            expect(contents).to.have.length(1);
+            expect(contents).to.have.length(2);
 
             done();
 

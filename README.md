@@ -23,3 +23,7 @@ raspar.get(['http://www.google.com/humans.txt']).then((contents) => {
 
 });
 ```
+
+## Documentation
+
+View full documentation [here](DOCUMENTATION.md).

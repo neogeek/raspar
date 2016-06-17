@@ -9,6 +9,7 @@
   "devDependencies": {
     "chai": "3.5.0",
     "coveralls": "2.11.9",
+    "doxdox": "0.1.14",
     "eslint": "2.12.0",
     "jscoverage": "0.6.0",
     "mocha": "2.5.3",

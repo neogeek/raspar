@@ -9,7 +9,7 @@ const raspar = require('raspar');
 
 raspar.get('http://www.google.com/humans.txt').then((content) => {
 
-    console.log(content);
+    console.log(content.body);
 
 });
 ```
@@ -19,7 +19,7 @@ const raspar = require('raspar');
 
 raspar.get(['http://www.google.com/humans.txt']).then((contents) => {
 
-    console.log(contents[0]);
+    console.log(contents[0].body);
 
 });
 ```

@@ -2,9 +2,6 @@
   "name": "raspar",
   "description": "A simple to use Promise-based web scraper with local caching.",
   "version": "1.0.0",
-  "bin": {
-    "raspar": "./bin/raspar"
-  },
   "engines": {
     "node": ">=4.0"
   },

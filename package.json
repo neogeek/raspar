@@ -44,6 +44,5 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/neogeek/raspar.git"
-  },
-  "private": true
+  }
 }

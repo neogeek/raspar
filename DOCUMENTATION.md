@@ -15,9 +15,9 @@ Request URL from remote resource.
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
-- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 - **options.cacheDirectory** `Boolean`  *Optional* Directory to store cache. Defaults to `temp/cache/`.
 - **options.cacheMemory** `Boolean`  *Optional* Store cache in memory instead of local files. Defaults to `false`.
+- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 
 
 
@@ -75,9 +75,9 @@ Requests a URL from cache.
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
-- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 - **options.cacheDirectory** `Boolean`  *Optional* Directory to store cache. Defaults to `temp/cache/`.
 - **options.cacheMemory** `Boolean`  *Optional* Store cache in memory instead of local files. Defaults to `false`.
+- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 
 
 
@@ -107,9 +107,9 @@ Requests a URL from either local cache or remote resource.
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
-- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 - **options.cacheDirectory** `Boolean`  *Optional* Directory to store cache. Defaults to `temp/cache/`.
 - **options.cacheMemory** `Boolean`  *Optional* Store cache in memory instead of local files. Defaults to `false`.
+- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 
 
 
@@ -139,9 +139,9 @@ Requests a URL or an array of URLs.
 
 - **url** `String` `Array`   Either a URL string or an array of URLs.
 - **options** `Object`  *Optional* Options object.
-- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 - **options.cacheDirectory** `Boolean`  *Optional* Directory to store cache. Defaults to `temp/cache/`.
 - **options.cacheMemory** `Boolean`  *Optional* Store cache in memory instead of local files. Defaults to `false`.
+- **options.ttl** `Boolean`  *Optional* TTL (Time to live) for local/memory based cache.
 
 
 

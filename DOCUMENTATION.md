@@ -6,7 +6,7 @@
 
 ### requestFromUrl(url[, options])  *private method*
 
-Request from URL from remote resource.
+Request URL from remote resource.
 
 
 
@@ -25,7 +25,7 @@ Request from URL from remote resource.
 #### Examples
 
 ```javascript
-raspar.requestFromUrl('http://www.google.com/humans.txt').then(() => {});
+raspar.requestFromUrl('http://www.google.com/humans.txt').then((res) => {});
 ```
 
 
@@ -38,7 +38,7 @@ raspar.requestFromUrl('http://www.google.com/humans.txt').then(() => {});
 
 ### formatCache([res])  *private method*
 
-Parses local cache and adds cached flag to the returned result.
+Parses local cache and adds cached property to the returned result.
 
 
 
@@ -53,14 +53,14 @@ Parses local cache and adds cached flag to the returned result.
 #### Examples
 
 ```javascript
-raspar.formatCache({}).then(function (res) { console.log(res.cached); });
+raspar.formatCache({}).then((res) => { console.log(res.cached); });
 ```
 
 
 #### Returns
 
 
-- `Object`   Promise
+- `Object`   Modified object with new cached property.
 
 
 
@@ -85,7 +85,7 @@ Requests a URL from cache.
 #### Examples
 
 ```javascript
-raspar.requestFromCache('http://www.google.com/humans.txt').then(() => {});
+raspar.requestFromCache('http://www.google.com/humans.txt').then((res) => {});
 ```
 
 
@@ -117,7 +117,7 @@ Requests a URL from either local cache or remote resource.
 #### Examples
 
 ```javascript
-raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then(() => {});
+raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then((res) => {});
 ```
 
 
@@ -149,10 +149,10 @@ Requests a URL or an array of URLs.
 #### Examples
 
 ```javascript
-raspar.get('http://www.google.com/humans.txt').then(() => {});
+raspar.get('http://www.google.com/humans.txt').then((res) => {});
 ```
 ```javascript
-raspar.get(['http://www.google.com/humans.txt']).then(() => {});
+raspar.get(['http://www.google.com/humans.txt']).then((res) => {});
 ```
 
 

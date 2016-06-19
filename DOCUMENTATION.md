@@ -36,7 +36,7 @@ raspar.requestFromUrl('http://www.google.com/humans.txt').then(() => {});
 
 
 
-#### formatCache([res]) 
+#### formatCache([res])  *private method*
 
 Parses local cache and adds cached flag to the returned result.
 

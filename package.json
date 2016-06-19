@@ -1,5 +1,14 @@
 {
-  "private": true,
+  "name": "raspar",
+  "description": "A simple to use Promise-based web scraper with local caching.",
+  "version": "1.0.0",
+  "bin": {
+    "spire-of-babel": "./bin/raspar"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "license": "MIT",
   "dependencies": {
     "cache-manager": "2.1.2",
     "es6-promisify": "4.1.0",
@@ -18,5 +27,23 @@
   },
   "scripts": {
     "test": "make test"
-  }
+  },
+  "keywords": [
+    "request",
+    "cache",
+    "promise"
+  ],
+  "authors": [
+    {
+      "name": "Scott Doxey",
+      "email": "hello@scottdoxey.com",
+      "homepage": "http://scottdoxey.com/"
+    }
+  ],
+  "homepage": "https://github.com/neogeek/raspar",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neogeek/raspar.git"
+  },
+  "private": true
 }

@@ -2,6 +2,11 @@
 
 > A simple to use Promise-based web scraper with local caching.
 
+[![Build Status](https://travis-ci.org/neogeek/raspar.svg?branch=master)](https://travis-ci.org/neogeek/raspar)
+[![Dependency Status](https://david-dm.org/neogeek/raspar.svg)](https://david-dm.org/neogeek/raspar)
+[![bitHound Overall Score](https://www.bithound.io/github/neogeek/raspar/badges/score.svg)](https://www.bithound.io/github/neogeek/raspar)
+[![NPM Version](http://img.shields.io/npm/v/raspar.svg?style=flat)](https://www.npmjs.org/package/raspar)
+
 ## Usage
 
 ```javascript

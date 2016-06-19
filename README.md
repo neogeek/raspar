@@ -29,6 +29,12 @@ raspar.get(['http://www.google.com/humans.txt']).then((res) => {
 ```javascript
 const raspar = require('raspar');
 
+const options = {
+    'cacheDirectory': 'temp/cache/',
+    'cacheMemory': false,
+    'ttl': 86400
+};
+
 raspar.get('http://www.google.com/humans.txt', options).then((res) => { });
 ```
 

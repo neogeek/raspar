@@ -1,17 +1,17 @@
 # Documentation
 
 
-### raspar.js
+## raspar.js
 
 
-#### requestFromUrl(url[, options])  *private method*
+### requestFromUrl(url[, options])  *private method*
 
 Request from URL from remote resource.
 
 
 
 
-##### Parameters
+#### Parameters
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
@@ -22,56 +22,56 @@ Request from URL from remote resource.
 
 
 
-##### Examples
+#### Examples
 
 ```javascript
 raspar.requestFromUrl('http://www.google.com/humans.txt').then(() => {});
 ```
 
 
-##### Returns
+#### Returns
 
 
 - `Object`   Promise
 
 
 
-#### formatCache([res])  *private method*
+### formatCache([res])  *private method*
 
 Parses local cache and adds cached flag to the returned result.
 
 
 
 
-##### Parameters
+#### Parameters
 
 - **res** `Object`  *Optional* Stored cache response.
 
 
 
 
-##### Examples
+#### Examples
 
 ```javascript
 raspar.formatCache({}).then(function (res) { console.log(res.cached); });
 ```
 
 
-##### Returns
+#### Returns
 
 
 - `Object`   Promise
 
 
 
-#### requestFromCache(url[, options])  *private method*
+### requestFromCache(url[, options])  *private method*
 
 Requests a URL from cache.
 
 
 
 
-##### Parameters
+#### Parameters
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
@@ -82,28 +82,28 @@ Requests a URL from cache.
 
 
 
-##### Examples
+#### Examples
 
 ```javascript
 raspar.requestFromCache('http://www.google.com/humans.txt').then(() => {});
 ```
 
 
-##### Returns
+#### Returns
 
 
 - `Object`   Promise
 
 
 
-#### requestFromUrlorCache(url[, options])  *private method*
+### requestFromUrlorCache(url[, options])  *private method*
 
 Requests a URL from either local cache or remote resource.
 
 
 
 
-##### Parameters
+#### Parameters
 
 - **url** `String`   A URL string.
 - **options** `Object`  *Optional* Options object.
@@ -114,28 +114,28 @@ Requests a URL from either local cache or remote resource.
 
 
 
-##### Examples
+#### Examples
 
 ```javascript
 raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then(() => {});
 ```
 
 
-##### Returns
+#### Returns
 
 
 - `Object`   Promise
 
 
 
-#### get(url[, options]) 
+### get(url[, options]) 
 
 Requests a URL or an array of URLs.
 
 
 
 
-##### Parameters
+#### Parameters
 
 - **url** `String` `Array`   Either a URL string or an array of URLs.
 - **options** `Object`  *Optional* Options object.
@@ -146,7 +146,7 @@ Requests a URL or an array of URLs.
 
 
 
-##### Examples
+#### Examples
 
 ```javascript
 raspar.get('http://www.google.com/humans.txt').then(() => {});
@@ -156,7 +156,7 @@ raspar.get(['http://www.google.com/humans.txt']).then(() => {});
 ```
 
 
-##### Returns
+#### Returns
 
 
 - `Object`   Promise

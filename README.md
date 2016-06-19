@@ -7,7 +7,7 @@
 ```javascript
 const raspar = require('raspar');
 
-raspar.get('http://www.google.com/humans.txt').then((res) => {
+raspar.fetch('http://www.google.com/humans.txt').then((res) => {
 
     console.log(res.body);
 
@@ -17,7 +17,7 @@ raspar.get('http://www.google.com/humans.txt').then((res) => {
 ```javascript
 const raspar = require('raspar');
 
-raspar.get(['http://www.google.com/humans.txt']).then((res) => {
+raspar.fetch(['http://www.google.com/humans.txt']).then((res) => {
 
     console.log(res[0].body);
 
@@ -35,7 +35,7 @@ const options = {
     'ttl': 86400
 };
 
-raspar.get('http://www.google.com/humans.txt', options).then((res) => { });
+raspar.fetch('http://www.google.com/humans.txt', options).then((res) => { });
 ```
 
 | Name | Description | Default Value |

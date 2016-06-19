@@ -128,7 +128,7 @@ raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then((res) => {
 
 
 
-### get(url[, options]) 
+### fetch(url[, options]) 
 
 Requests a URL or an array of URLs.
 
@@ -149,10 +149,10 @@ Requests a URL or an array of URLs.
 #### Examples
 
 ```javascript
-raspar.get('http://www.google.com/humans.txt').then((res) => {});
+raspar.fetch('http://www.google.com/humans.txt').then((res) => {});
 ```
 ```javascript
-raspar.get(['http://www.google.com/humans.txt']).then((res) => {});
+raspar.fetch(['http://www.google.com/humans.txt']).then((res) => {});
 ```
 
 

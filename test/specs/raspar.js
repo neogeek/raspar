@@ -16,7 +16,7 @@ describe('raspar', () => {
 
     it('should make a basic request (caching in temp file)', (done) => {
 
-        raspar.get('http://google.com/humans.txt').then((res) => {
+        raspar.fetch('http://google.com/humans.txt').then((res) => {
 
             expect(res).to.have.property('body');
             expect(res).to.not.have.property('cached');
@@ -29,7 +29,7 @@ describe('raspar', () => {
 
     it('should make a basic request (cached in temp file)', (done) => {
 
-        raspar.get('http://google.com/humans.txt', {
+        raspar.fetch('http://google.com/humans.txt', {
             'cacheDirectory': 'temp/cache/'
         }).then((res) => {
 
@@ -44,7 +44,7 @@ describe('raspar', () => {
 
     it('should make a basic request (caching in memory)', (done) => {
 
-        raspar.get('http://google.com/humans.txt', {
+        raspar.fetch('http://google.com/humans.txt', {
             'cacheMemory': true
         }).then((res) => {
 
@@ -59,7 +59,7 @@ describe('raspar', () => {
 
     it('should make a basic request (cached in memory)', (done) => {
 
-        raspar.get('http://google.com/humans.txt', {
+        raspar.fetch('http://google.com/humans.txt', {
             'cacheMemory': true
         }).then((res) => {
 
@@ -74,7 +74,7 @@ describe('raspar', () => {
 
     it('should make a basic request (expired cached in temp file)', (done) => {
 
-        raspar.get('http://www.google.com/robots.txt', {
+        raspar.fetch('http://www.google.com/robots.txt', {
             'ttl': 1
         }).then(() => {
 
@@ -96,7 +96,7 @@ describe('raspar', () => {
 
     it('should make a basic request (expired cached in memory)', (done) => {
 
-        raspar.get('http://www.google.com/robots.txt', {
+        raspar.fetch('http://www.google.com/robots.txt', {
             'cacheMemory': true,
             'ttl': 1
         }).then(() => {
@@ -120,7 +120,7 @@ describe('raspar', () => {
 
     it('should make a basic request (no cache)', (done) => {
 
-        raspar.get('http://google.com/humans.txt', {
+        raspar.fetch('http://google.com/humans.txt', {
             'cacheDirectory': false,
             'cacheMemory': false
         }).then((res) => {
@@ -136,7 +136,7 @@ describe('raspar', () => {
 
     it('should make a basic request for an array of URLs', (done) => {
 
-        raspar.get([
+        raspar.fetch([
             'http://google.com/humans.txt',
             'http://google.com/robots.txt'
         ]).then((res) => {
@@ -152,7 +152,7 @@ describe('raspar', () => {
 
     it('should error on invalid URL', (done) => {
 
-        raspar.get('test').catch(() => {
+        raspar.fetch('test').catch(() => {
 
             done();
 

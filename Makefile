@@ -7,8 +7,8 @@ test:
 	@make clean
 
 lint:
-	$(BIN)/eslint ./lib/raspar.js
-	$(BIN)/eslint ./test/specs
+	$(BIN)/eslint ./lib/
+	$(BIN)/eslint ./test/
 
 coverage:
 	mkdir lib-es5 || exit 0;

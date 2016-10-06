@@ -8,18 +8,18 @@
   "license": "MIT",
   "dependencies": {
     "cache-manager": "2.1.2",
-    "es6-promisify": "4.1.0",
+    "es6-promisify": "5.0.0",
     "mkdirp": "0.5.1",
-    "request": "2.72.0"
+    "request": "2.75.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "1.6.0",
     "chai": "3.5.0",
     "coveralls": "2.11.9",
-    "doxdox": "0.1.14",
+    "doxdox": "0.1.15",
     "eslint": "3.7.1",
     "jscoverage": "0.6.0",
-    "mocha": "2.5.3",
+    "mocha": "3.1.0",
     "mocha-reporter-cov-summary": "0.1.1",
     "spire-of-babel": "1.1.4"
   },

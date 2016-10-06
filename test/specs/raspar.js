@@ -14,9 +14,9 @@ const raspar = require(`${lib}/raspar`);
 
 describe('raspar', () => {
 
-    it('should make a basic request (caching in temp file)', (done) => {
+    it('should make a basic request (caching in temp file)', done => {
 
-        raspar.fetch('http://google.com/humans.txt').then((res) => {
+        raspar.fetch('http://google.com/humans.txt').then(res => {
 
             expect(res).to.have.property('body');
             expect(res).to.not.have.property('cached');
@@ -27,11 +27,11 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (cached in temp file)', (done) => {
+    it('should make a basic request (cached in temp file)', done => {
 
         raspar.fetch('http://google.com/humans.txt', {
             'cacheDirectory': 'temp/cache/'
-        }).then((res) => {
+        }).then(res => {
 
             expect(res).to.have.property('body');
             expect(res).to.have.property('cached');
@@ -42,11 +42,11 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (caching in memory)', (done) => {
+    it('should make a basic request (caching in memory)', done => {
 
         raspar.fetch('http://google.com/humans.txt', {
             'cacheMemory': true
-        }).then((res) => {
+        }).then(res => {
 
             expect(res).to.have.property('body');
             expect(res).to.not.have.property('cached');
@@ -57,11 +57,11 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (cached in memory)', (done) => {
+    it('should make a basic request (cached in memory)', done => {
 
         raspar.fetch('http://google.com/humans.txt', {
             'cacheMemory': true
-        }).then((res) => {
+        }).then(res => {
 
             expect(res).to.have.property('body');
             expect(res).to.have.property('cached');
@@ -72,7 +72,7 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (expired cached in temp file)', (done) => {
+    it('should make a basic request (expired cached in temp file)', done => {
 
         raspar.fetch('http://www.google.com/robots.txt', {
             'ttl': 1
@@ -94,7 +94,7 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (expired cached in memory)', (done) => {
+    it('should make a basic request (expired cached in memory)', done => {
 
         raspar.fetch('http://www.google.com/robots.txt', {
             'cacheMemory': true,
@@ -118,12 +118,12 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request (no cache)', (done) => {
+    it('should make a basic request (no cache)', done => {
 
         raspar.fetch('http://google.com/humans.txt', {
             'cacheDirectory': false,
             'cacheMemory': false
-        }).then((res) => {
+        }).then(res => {
 
             expect(res).to.have.property('body');
             expect(res).to.not.have.property('cached');
@@ -134,12 +134,12 @@ describe('raspar', () => {
 
     });
 
-    it('should make a basic request for an array of URLs', (done) => {
+    it('should make a basic request for an array of URLs', done => {
 
         raspar.fetch([
             'http://google.com/humans.txt',
             'http://google.com/robots.txt'
-        ]).then((res) => {
+        ]).then(res => {
 
             expect(res).to.have.length(2);
             expect(res[0]).to.have.property('body');
@@ -150,7 +150,7 @@ describe('raspar', () => {
 
     });
 
-    it('should error on invalid URL', (done) => {
+    it('should error on invalid URL', done => {
 
         raspar.fetch('test').catch(() => {
 

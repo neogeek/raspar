@@ -13,10 +13,11 @@
     "request": "2.72.0"
   },
   "devDependencies": {
+    "@neogeek/eslint-config-standards": "1.6.0",
     "chai": "3.5.0",
     "coveralls": "2.11.9",
     "doxdox": "0.1.14",
-    "eslint": "2.13.0",
+    "eslint": "3.7.1",
     "jscoverage": "0.6.0",
     "mocha": "2.5.3",
     "mocha-reporter-cov-summary": "0.1.1",

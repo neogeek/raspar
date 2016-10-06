@@ -25,10 +25,6 @@ coverage:
 docs:
 	$(BIN)/doxdox lib/ --layout templates/DOCUMENTATION.hbs --output DOCUMENTATION.md
 
-setup:
-	rm -rf config/eslint-coding-standards || exit 0;
-	(cd config && curl -L https://github.com/neogeek/eslint-coding-standards/archive/master.tar.gz | tar -xz && mv eslint-coding-standards-master eslint-coding-standards)
-
 clean:
 	@rm -rf ./temp/ || exit 0;
 

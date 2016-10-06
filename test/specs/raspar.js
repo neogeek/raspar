@@ -12,6 +12,8 @@ if (process.env.COVERAGE) {
 
 const raspar = require(`${lib}/raspar`);
 
+const TIMEOUT = 3000;
+
 describe('raspar', () => {
 
     it('should make a basic request (caching in temp file)', done => {
@@ -25,7 +27,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (cached in temp file)', done => {
 
@@ -40,7 +42,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (caching in memory)', done => {
 
@@ -55,7 +57,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (cached in memory)', done => {
 
@@ -70,7 +72,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (expired cached in temp file)', done => {
 
@@ -92,7 +94,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (expired cached in memory)', done => {
 
@@ -116,7 +118,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request (no cache)', done => {
 
@@ -132,7 +134,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should make a basic request for an array of URLs', done => {
 
@@ -148,7 +150,7 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
     it('should error on invalid URL', done => {
 
@@ -158,6 +160,6 @@ describe('raspar', () => {
 
         });
 
-    });
+    }).timeout(TIMEOUT);
 
 });

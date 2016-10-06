@@ -1,4 +1,4 @@
 node_modules/
-temp/
 
-coverage.html
+coverage/
+temp/

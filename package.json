@@ -11,7 +11,7 @@
     "cache-manager": "2.2.0",
     "es6-promisify": "5.0.0",
     "mkdirp": "0.5.1",
-    "request": "2.75.0"
+    "request": "2.76.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "1.6.3",

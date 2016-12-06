@@ -40,6 +40,12 @@ const raspar = require('raspar');
 const options = {
     'cacheDirectory': 'temp/cache/',
     'cacheMemory': false,
+    'requestOptions': {
+        'headers': {
+            'User-Agent': 'request'
+        },
+        'method': 'POST'
+    },
     'ttl': 86400
 };
 

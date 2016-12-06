@@ -162,4 +162,22 @@ describe('raspar', () => {
 
     }).timeout(TIMEOUT);
 
+    it('should post to URL using custom request options', done => {
+
+        raspar.fetch('https://httpbin.org/post', {
+            'cacheDirectory': false,
+            'cacheMemory': false,
+            'requestOptions': {
+                'method': 'POST'
+            }
+        }).then(res => {
+
+            expect(res.request.method).to.equal('POST');
+
+            done();
+
+        });
+
+    }).timeout(TIMEOUT);
+
 });

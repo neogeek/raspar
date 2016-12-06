@@ -13,9 +13,6 @@ lint:
 coverage:
 	$(BIN)/istanbul cover $(BIN)/_mocha ./test/specs && $(BIN)/codecov
 
-docs:
-	$(BIN)/doxdox lib/ --layout templates/DOCUMENTATION.hbs --output DOCUMENTATION.md
-
 clean:
 	@rm -rf ./temp || exit 0;
 

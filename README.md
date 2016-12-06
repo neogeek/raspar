@@ -8,6 +8,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/npm/raspar/badge.svg)](https://snyk.io/test/npm/raspar)
 [![bitHound Overall Score](https://www.bithound.io/github/neogeek/raspar/badges/score.svg)](https://www.bithound.io/github/neogeek/raspar)
 [![NPM Version](http://img.shields.io/npm/v/raspar.svg?style=flat)](https://www.npmjs.org/package/raspar)
+[![Latest Documentation](https://doxdox.org/images/badge-flat.svg)](https://doxdox.org/neogeek/raspar)
 
 ## Usage
 
@@ -53,4 +54,4 @@ raspar.fetch('http://www.google.com/humans.txt', options).then((res) => { });
 
 ## Documentation
 
-View full documentation [here](DOCUMENTATION.md).
+View full documentation [here](https://doxdox.org/neogeek/raspar).

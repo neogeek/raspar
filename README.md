@@ -46,7 +46,7 @@ const options = {
         },
         'method': 'POST'
     },
-    'ttl': 86400
+    'ttl': 1800
 };
 
 raspar.fetch('http://www.google.com/humans.txt', options).then((res) => { });
@@ -56,7 +56,7 @@ raspar.fetch('http://www.google.com/humans.txt', options).then((res) => { });
 | ---- | ----------- | ------------- |
 | cacheDirectory | Directory to store cache. | `temp/cache/` |
 | cacheMemory | Store cache in memory instead of local files. | `false` |
-| ttl | TTL (Time to live) for local/memory based cache. | `86400` |
+| ttl | TTL (Time to live) in seconds for local/memory based cache. | `1800` |
 
 ## Documentation
 

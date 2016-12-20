@@ -1,4 +1,4 @@
-# [raspar](https://github.com/neogeek/raspar) *1.0.2*
+# [raspar](https://github.com/neogeek/raspar) *1.1.0*
 
 > A simple to use Promise-based web scraper with local caching.
 
@@ -22,7 +22,7 @@ Request URL from remote resource.
 | options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) for local/memory based cache. | *Optional* |
+| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -30,7 +30,7 @@ Request URL from remote resource.
 ##### Examples
 
 ```javascript
-raspar.requestFromUrl('http://www.google.com/humans.txt').then((res) => {});
+raspar.requestFromUrl('http://www.google.com/humans.txt').then(res => {});
 ```
 
 
@@ -60,7 +60,7 @@ Parses local cache and adds cached property to the returned result.
 ##### Examples
 
 ```javascript
-raspar.formatCache({}).then((res) => { console.log(res.cached); });
+raspar.formatCache({}).then(res => { console.log(res.cached); });
 ```
 
 
@@ -87,7 +87,7 @@ Requests a URL from cache.
 | options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) for local/memory based cache. | *Optional* |
+| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -95,7 +95,7 @@ Requests a URL from cache.
 ##### Examples
 
 ```javascript
-raspar.requestFromCache('http://www.google.com/humans.txt').then((res) => {});
+raspar.requestFromCache('http://www.google.com/humans.txt').then(res => {});
 ```
 
 
@@ -122,7 +122,7 @@ Requests a URL from either local cache or remote resource.
 | options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) for local/memory based cache. | *Optional* |
+| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -130,7 +130,7 @@ Requests a URL from either local cache or remote resource.
 ##### Examples
 
 ```javascript
-raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then((res) => {});
+raspar.requestFromUrlorCache('http://www.google.com/humans.txt').then(res => {});
 ```
 
 
@@ -157,7 +157,7 @@ Requests a URL or an array of URLs.
 | options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) for local/memory based cache. | *Optional* |
+| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -165,10 +165,10 @@ Requests a URL or an array of URLs.
 ##### Examples
 
 ```javascript
-raspar.fetch('http://www.google.com/humans.txt').then((res) => {});
+raspar.fetch('http://www.google.com/humans.txt').then(res => {});
 ```
 ```javascript
-raspar.fetch(['http://www.google.com/humans.txt']).then((res) => {});
+raspar.fetch(['http://www.google.com/humans.txt']).then(res => {});
 ```
 
 

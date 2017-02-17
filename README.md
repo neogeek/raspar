@@ -1,5 +1,7 @@
 # raspar
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/neogeek/raspar.svg)](https://greenkeeper.io/)
+
 > A simple to use Promise-based web scraper with local caching.
 
 [![Build Status](https://travis-ci.org/neogeek/raspar.svg?branch=master)](https://travis-ci.org/neogeek/raspar)

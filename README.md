@@ -8,6 +8,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/npm/raspar/badge.svg)](https://snyk.io/test/npm/raspar)
 [![bitHound Overall Score](https://www.bithound.io/github/neogeek/raspar/badges/score.svg)](https://www.bithound.io/github/neogeek/raspar)
 [![NPM Version](http://img.shields.io/npm/v/raspar.svg?style=flat)](https://www.npmjs.org/package/raspar)
+[![Greenkeeper badge](https://badges.greenkeeper.io/neogeek/raspar.svg)](https://greenkeeper.io/)
 [![Latest Documentation](https://doxdox.org/images/badge-flat.svg)](https://doxdox.org/neogeek/raspar)
 
 ## Usage

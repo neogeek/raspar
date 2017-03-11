@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 (December 20, 2016)
+
+- Changed default value for TTL to 30 minutes.
+
 ## 1.0.2 (December 5, 2016)
 
 - Added ability to send request custom options.

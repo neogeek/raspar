@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 (March 11, 2017)
+
+- Updated packages.
+
 ## 1.1.0 (December 20, 2016)
 
 - Changed default value for TTL to 30 minutes.

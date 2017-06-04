@@ -23,7 +23,12 @@
     "mocha": "^3.4.2"
   },
   "scripts": {
-    "test": "make lint && make coverage"
+    "test": "npm run lint && npm run clean && mocha test/specs/",
+    "test:docs": "doxdox 'lib/**/*.js' -l markdown | diff DOCUMENTATION.md -",
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha test/specs/ && codecov",
+    "clean": "rm -rf temp/",
+    "docs": "doxdox 'lib/**/*.js' -l markdown -o DOCUMENTATION.md"
   },
   "keywords": [
     "request",

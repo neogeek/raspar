@@ -14,7 +14,7 @@
     "request": "2.81.0"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "^1.15.0",
+    "@neogeek/eslint-config-standards": "^2.0.0",
     "chai": "^4.0.1",
     "codecov": "^2.2.0",
     "doxdox": "^2.0.2",

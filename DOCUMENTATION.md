@@ -1,4 +1,4 @@
-# [raspar](https://github.com/neogeek/raspar) *1.1.1*
+# [raspar](https://github.com/neogeek/raspar) *1.1.2*
 
 > A simple to use Promise-based web scraper with local caching.
 

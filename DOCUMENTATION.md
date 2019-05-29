@@ -19,10 +19,10 @@ Request URL from remote resource.
 | ---- | ---- | ----------- | -------- |
 | url | `String`  | A URL string. | &nbsp; |
 | options | `Object`  | Options object. | *Optional* |
-| options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
+| options.cacheDirectory | `String`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
+| options.ttl | `Integer`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -71,6 +71,55 @@ raspar.formatCache({}).then(res => { console.log(res.cached); });
 
 
 
+#### requestFromCacheMemory(hash)  *private method*
+
+Returns cache from memory based on a specific hash.
+
+
+
+
+##### Parameters
+
+| Name | Type | Description |  |
+| ---- | ---- | ----------- | -------- |
+| hash | `String`  | Hash generated based on the URL. | &nbsp; |
+
+
+
+
+##### Returns
+
+
+- `Object`  Promise
+
+
+
+#### requestFromCacheDirectory(hash, settings)  *private method*
+
+Returns cache from local directory based on a specific hash.
+
+
+
+
+##### Parameters
+
+| Name | Type | Description |  |
+| ---- | ---- | ----------- | -------- |
+| hash | `String`  | Hash generated based on the URL. | &nbsp; |
+| settings | `Object`  | Settings object. | &nbsp; |
+| settings.cacheDirectory | `String`  | Directory to store cache. | &nbsp; |
+| settings.ttl | `Integer`  | TTL (Time to live) in seconds for local/memory based cache. | &nbsp; |
+
+
+
+
+##### Returns
+
+
+- `Object`  Promise
+
+
+
 #### requestFromCache(url[, options])  *private method*
 
 Requests a URL from cache.
@@ -84,10 +133,10 @@ Requests a URL from cache.
 | ---- | ---- | ----------- | -------- |
 | url | `String`  | A URL string. | &nbsp; |
 | options | `Object`  | Options object. | *Optional* |
-| options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
+| options.cacheDirectory | `String`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
+| options.ttl | `Integer`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -122,7 +171,7 @@ Requests a URL from either local cache or remote resource.
 | options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
+| options.ttl | `Integer`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 
@@ -154,10 +203,10 @@ Requests a URL or an array of URLs.
 | ---- | ---- | ----------- | -------- |
 | url | `String` `Array`  | Either a URL string or an array of URLs. | &nbsp; |
 | options | `Object`  | Options object. | *Optional* |
-| options.cacheDirectory | `Boolean`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
+| options.cacheDirectory | `String`  | Directory to store cache. Defaults to `temp/cache/`. | *Optional* |
 | options.cacheMemory | `Boolean`  | Store cache in memory instead of local files. Defaults to `false`. | *Optional* |
 | options.requestOptions | `Object`  | Custom request options object. | *Optional* |
-| options.ttl | `Boolean`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
+| options.ttl | `Integer`  | TTL (Time to live) in seconds for local/memory based cache. Default: 1800 | *Optional* |
 
 
 

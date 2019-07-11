@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cache-manager": "2.9.1",
+    "cache-manager": "2.10.0",
     "es6-promisify": "6.0.1",
     "mkdirp": "0.5.1",
     "request": "2.88.0"

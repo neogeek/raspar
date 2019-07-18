@@ -21,7 +21,7 @@
     "doxdox": "3.0.0",
     "eslint": "5.16.0",
     "istanbul": "0.4.5",
-    "mocha": "6.1.4"
+    "mocha": "6.2.0"
   },
   "scripts": {
     "test": "npm run lint && npm run clean && mocha test/specs/",

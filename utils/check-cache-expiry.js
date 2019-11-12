@@ -4,13 +4,15 @@ const {promisify} = require('util');
 const stat = promisify(fs.stat);
 
 const checkCacheExpiry = (path, ttl) =>
-    stat(path).then(({mtime}) => {
+    stat(path).then(stats => {
 
-        if (new Date(mtime).getTime() + ttl < Date.now()) {
+        if (new Date(stats.mtime).getTime() + ttl < Date.now()) {
 
             throw new Error('Cache has expired.');
 
         }
+
+        return stats;
 
     });
 

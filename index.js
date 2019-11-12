@@ -1,10 +1,7 @@
-const {fetch, requestFromUrlorCache} = require('./lib/raspar');
-const checkCacheExpiry = require('./utils/check-cache-expiry');
-const generateUUID = require('./utils/generate-uuid');
+const {fetch} = require('./lib/raspar');
+const utils = require('./utils/');
 
 module.exports = {
-    checkCacheExpiry,
     fetch,
-    generateUUID,
-    requestFromUrlorCache
+    utils
 };

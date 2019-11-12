@@ -14,6 +14,11 @@ const checkCacheExpiry = (path, ttl) =>
 
         return stats;
 
-    });
+    })
+        .catch(() => {
+
+            throw new Error('Cache is missing.');
+
+        });
 
 module.exports = checkCacheExpiry;

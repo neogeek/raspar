@@ -1,7 +1,7 @@
 const fs = require('fs');
 const {promisify} = require('util');
 
-const {checkCacheExpiry} = require('./');
+const checkCacheExpiry = require('./check-cache-expiry');
 
 const readFile = promisify(fs.readFile);
 

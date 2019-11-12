@@ -1,7 +1,4 @@
-coverage/
-test/
+tests/
 
-.eslintignore
 .eslintrc
-
 .travis.yml

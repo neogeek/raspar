@@ -1,5 +1,7 @@
 node_modules/
 
+coverage/
+
 temp/
 
 package-lock.json

@@ -19,6 +19,7 @@
     "jest": "24.9.0"
   },
   "scripts": {
+    "coverage": "jest --coverage --verbose=true",
     "test": "jest --verbose=true"
   },
   "keywords": [

@@ -1,35 +1,27 @@
 {
   "name": "raspar",
   "description": "A simple to use Promise-based web scraper with local caching.",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "main": "index.js",
   "engines": {
-    "node": ">=10.0"
+    "node": ">=12.0"
   },
   "license": "MIT",
   "dependencies": {
-    "cache-manager": "2.9.1",
-    "es6-promisify": "6.0.1",
     "mkdirp": "0.5.1",
     "request": "2.88.0"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "4.2.0",
-    "babel-eslint": "10.0.1",
-    "chai": "4.2.0",
-    "codecov": "3.5.0",
-    "doxdox": "3.0.0",
-    "eslint": "5.16.0",
-    "istanbul": "0.4.5",
-    "mocha": "6.1.4"
+    "@neogeek/eslint-config-standards": "github:neogeek/eslint-config-standards",
+    "babel-eslint": "10.0.3",
+    "del": "5.1.0",
+    "eslint": "6.6.0",
+    "jest": "24.9.0"
   },
   "scripts": {
-    "test": "npm run lint && npm run clean && mocha test/specs/",
-    "test:docs": "doxdox 'lib/**/*.js' -l markdown | diff DOCUMENTATION.md -",
+    "coverage": "jest --coverage --verbose=true",
     "lint": "eslint .",
-    "coverage": "istanbul cover _mocha test/specs/ && codecov",
-    "clean": "rm -rf temp/",
-    "docs": "doxdox 'lib/**/*.js' -l markdown -o DOCUMENTATION.md"
+    "test": "jest --verbose=true"
   },
   "keywords": [
     "request",

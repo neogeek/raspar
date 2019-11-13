@@ -1,8 +1,5 @@
 {
   "extends": [
     "@neogeek/eslint-config-standards"
-  ],
-  "rules": {
-    "prefer-destructuring": 0
-  }
+  ]
 }

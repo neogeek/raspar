@@ -26,7 +26,7 @@ fetch([
 ### Options
 
 ```javascript
-const raspar = require('raspar');
+const {fetch} = require('raspar');
 
 const options = {
     'cacheDirectory': 'temp/cache/',
@@ -39,7 +39,7 @@ const options = {
     'ttl': 1800
 };
 
-raspar.fetch('http://www.google.com/humans.txt', options).then(content => console.log(content));
+fetch('http://www.google.com/humans.txt', options).then(content => console.log(content));
 ```
 
 | Name | Description | Default Value |

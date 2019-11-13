@@ -1,6 +1,22 @@
+const {utimesSync} = require('fs');
 const {join} = require('path');
 
 const checkCacheExpiry = require('../utils/check-cache-expiry');
+
+beforeEach(() => {
+
+    const time = new Date();
+
+    utimesSync(
+        join(
+            __dirname,
+            '/mocks/cache.txt'
+        ),
+        time,
+        time
+    );
+
+});
 
 test(
     'Check cache for missing file',

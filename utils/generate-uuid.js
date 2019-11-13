@@ -1,8 +1,8 @@
 const crypto = require('crypto');
 
-const generateUUID = url => crypto
+const generateUUID = content => crypto
     .createHash('sha1')
-    .update(url)
+    .update(content)
     .digest('hex');
 
 module.exports = generateUUID;

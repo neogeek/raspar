@@ -11,21 +11,13 @@
 ```javascript
 const {fetch} = require('raspar');
 
-fetch('http://www.google.com/humans.txt').then(res => {
-
-    console.log(res);
-
-});
+fetch('http://www.google.com/humans.txt').then(content => console.log(content));
 ```
 
 ```javascript
 const {fetch} = require('raspar');
 
-fetch(['http://www.google.com/humans.txt']).then(res => {
-
-    console.log(res[0]);
-
-});
+fetch(['http://www.google.com/humans.txt']).then(content => console.log(content[0]));
 ```
 
 ### Options
@@ -44,7 +36,7 @@ const options = {
     'ttl': 1800
 };
 
-raspar.fetch('http://www.google.com/humans.txt', options).then(res => { });
+raspar.fetch('http://www.google.com/humans.txt', options).then(content => console.log(content));
 ```
 
 | Name | Description | Default Value |

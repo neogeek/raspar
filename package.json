@@ -20,6 +20,7 @@
   },
   "scripts": {
     "coverage": "jest --coverage --verbose=true",
+    "lint": "eslint .",
     "test": "jest --verbose=true"
   },
   "keywords": [

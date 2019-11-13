@@ -49,5 +49,5 @@ raspar.fetch('http://www.google.com/humans.txt', options).then(res => { });
 | Name | Description | Default Value |
 | ---- | ----------- | ------------- |
 | cacheDirectory | Directory to store cache. | `temp/cache/` |
-| requestOptions |  | `{}` |
-| ttl | TTL (Time to live) in seconds for local/memory based cache. | `1800` |
+| requestOptions | Request options object. [Read more github.com/request/request](https://github.com/request/request#requestoptions-callback) | `{}` |
+| ttl | TTL (Time to live) in seconds. | `1800` |

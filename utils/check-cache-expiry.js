@@ -8,17 +8,13 @@ const checkCacheExpiry = (path, ttl) =>
 
         if (new Date(stats.mtime).getTime() + ttl < Date.now()) {
 
-            throw new Error('Cache has expired.');
+            return Promise.reject(new Error('Cache has expired.'));
 
         }
 
         return stats;
 
     })
-        .catch(() => {
-
-            throw new Error('Cache is missing.');
-
-        });
+        .catch(() => Promise.reject(new Error('Cache is missing.')));
 
 module.exports = checkCacheExpiry;

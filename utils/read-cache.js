@@ -5,8 +5,6 @@ const checkCacheExpiry = require('./check-cache-expiry');
 
 const readFile = promisify(fs.readFile);
 
-const MILLISECONDS = 1000;
-
 /**
  * Read cache from file only if cache hasn't expired.
  *
@@ -19,7 +17,7 @@ const MILLISECONDS = 1000;
 
 const readCache = (path, ttl) => checkCacheExpiry(
     path,
-    ttl * MILLISECONDS
+    ttl
 )
     .then(() => readFile(
         path,

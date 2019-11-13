@@ -3,15 +3,17 @@ const {join} = require('path');
 
 const checkCacheExpiry = require('../utils/check-cache-expiry');
 
+const testFilePath = join(
+    __dirname,
+    '/mocks/cache.txt'
+);
+
 beforeEach(() => {
 
     const time = new Date();
 
     utimesSync(
-        join(
-            __dirname,
-            '/mocks/cache.txt'
-        ),
+        testFilePath,
         time,
         time
     );
@@ -28,19 +30,13 @@ test(
 
 test(
     'Check cache for existing file',
-    () => expect(checkCacheExpiry(join(
-        __dirname,
-        '/mocks/cache.txt'
-    ))).resolves.toBeTruthy()
+    () => expect(checkCacheExpiry(testFilePath)).resolves.toBeTruthy()
 );
 
 test(
     'Check cache for expired file',
     () => expect(checkCacheExpiry(
-        join(
-            __dirname,
-            '/mocks/cache.txt'
-        ),
+        testFilePath,
         -1
     )).rejects.toThrowError(/expired/u)
 );

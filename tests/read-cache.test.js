@@ -3,15 +3,17 @@ const {join} = require('path');
 
 const readCache = require('../utils/read-cache');
 
+const testFilePath = join(
+    __dirname,
+    '/mocks/cache.txt'
+);
+
 beforeEach(() => {
 
     const time = new Date();
 
     utimesSync(
-        join(
-            __dirname,
-            '/mocks/cache.txt'
-        ),
+        testFilePath,
         time,
         time
     );
@@ -20,8 +22,8 @@ beforeEach(() => {
 
 test(
     'Get contents of cached file',
-    () => expect(readCache(join(
-        __dirname,
-        '/mocks/cache.txt'
-    ))).resolves.toMatch(/cache/u)
+    () => expect(readCache(
+        testFilePath,
+        1800
+    )).resolves.toMatch(/cache/u)
 );

@@ -20,12 +20,8 @@ beforeEach(() => {
 
 test(
     'Get contents of cached file',
-    () => {
-
-        expect(readCache(join(
-            __dirname,
-            '/mocks/cache.txt'
-        ))).resolves.toMatch(/cache/u);
-
-    }
+    () => expect(readCache(join(
+        __dirname,
+        '/mocks/cache.txt'
+    ))).resolves.toMatch(/cache/u)
 );

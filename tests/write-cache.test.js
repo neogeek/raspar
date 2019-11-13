@@ -11,17 +11,13 @@ beforeAll(() => del(join(
 
 test(
     'Write new cached file',
-    () => {
-
-        expect(writeCache(
-            join(
-                __dirname,
-                '../temp/temp.txt'
-            ),
-            'temp'
-        )).resolves.toMatch(/temp/u);
-
-    }
+    () => expect(writeCache(
+        join(
+            __dirname,
+            '../temp/temp.txt'
+        ),
+        'temp'
+    )).resolves.toMatch(/temp/u)
 );
 
 afterAll(() => del(join(

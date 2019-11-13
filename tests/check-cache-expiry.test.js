@@ -9,7 +9,7 @@ test(
         expect(checkCacheExpiry(join(
             __dirname,
             '/mocks/missing-file.txt'
-        ))).rejects.toThrowError('Cache is missing.');
+        ))).rejects.toThrowError(/ENOENT/u);
 
     }
 );
@@ -36,7 +36,7 @@ test(
                 '/mocks/cache.txt'
             ),
             -1
-        )).rejects.toThrowError('Cache is expired.');
+        )).rejects.toThrowError(/expired/u);
 
     }
 );

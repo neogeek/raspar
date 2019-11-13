@@ -12,7 +12,7 @@ const mkdirp = promisify(require('mkdirp'));
  * @example writeCache('temp/cache.txt', 'cached contents').then(content => console.log(content));
  * @param {String} path File path to store cache.
  * @param {String} content Contents of cache.
- * @return {String}
+ * @return {Object} Promise
  * @public
  */
 

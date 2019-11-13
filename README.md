@@ -17,7 +17,10 @@ fetch('http://www.google.com/humans.txt').then(content => console.log(content));
 ```javascript
 const {fetch} = require('raspar');
 
-fetch(['http://www.google.com/humans.txt']).then(content => console.log(content[0]));
+fetch([
+    'http://www.google.com/humans.txt',
+    'http://www.google.com/robots.txt'
+]).then(content => console.log(content[0]));
 ```
 
 ### Options

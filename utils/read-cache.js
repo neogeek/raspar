@@ -11,7 +11,7 @@ const readFile = promisify(fs.readFile);
  * @example readCache('temp/cache.txt', 1800).then(contents => console.log(contents))
  * @param {String} path File path to read cache.
  * @param {Integer} ttl TTL (Time to live) in seconds.
- * @return {String}
+ * @return {Object} Promise
  * @public
  */
 

@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/neogeek/raspar.svg?branch=master)](https://travis-ci.org/neogeek/raspar)
 [![NPM Version](http://img.shields.io/npm/v/raspar.svg?style=flat)](https://www.npmjs.org/package/raspar)
+[![Latest Documentation](https://doxdox.org/images/badge-flat.svg)](https://doxdox.org/)
 
 ## Usage
 

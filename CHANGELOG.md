@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (November 13, 2019)
+
+- Complete rewrite of package.
+- Removed memory caching.
+
 ## 1.1.2 (August 23, 2017)
 
 - Updated packages.

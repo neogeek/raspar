@@ -12,15 +12,11 @@
     "request": "2.88.0"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "github:neogeek/eslint-config-standards",
-    "babel-eslint": "10.0.3",
     "del": "5.1.0",
-    "eslint": "6.6.0",
     "jest": "24.9.0"
   },
   "scripts": {
     "coverage": "jest --coverage --verbose=true",
-    "lint": "eslint .",
     "test": "jest --verbose=true"
   },
   "keywords": [

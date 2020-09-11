@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0 (September 10, 2020)
+
+- Updated packages.
+
 ## 2.0.0 (November 13, 2019)
 
 - Complete rewrite of package.

@@ -9,9 +9,7 @@ const crypto = require('crypto');
  * @public
  */
 
-const generateUUID = content => crypto
-    .createHash('sha1')
-    .update(content)
-    .digest('hex');
+const generateUUID = content =>
+    crypto.createHash('sha1').update(content).digest('hex');
 
 module.exports = generateUUID;

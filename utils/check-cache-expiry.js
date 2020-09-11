@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {promisify} = require('util');
+const { promisify } = require('util');
 
 const stat = promisify(fs.stat);
 
@@ -17,17 +17,13 @@ const MILLISECONDS = 1000;
 
 const checkCacheExpiry = (path, ttl) =>
     stat(path).then(stats => {
-
         const ttlInMilliseconds = ttl * MILLISECONDS;
 
         if (new Date(stats.mtime).getTime() + ttlInMilliseconds < Date.now()) {
-
             return Promise.reject(new Error('Cache has expired.'));
-
         }
 
         return stats;
-
     });
 
 module.exports = checkCacheExpiry;

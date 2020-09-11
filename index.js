@@ -1,4 +1,4 @@
-const {fetch} = require('./lib/raspar');
+const { fetch } = require('./lib/raspar');
 const utils = require('./utils/');
 
 module.exports = {

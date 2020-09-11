@@ -9,13 +9,13 @@
 ## Usage
 
 ```javascript
-const {fetch} = require('raspar');
+const { fetch } = require('raspar');
 
 fetch('http://www.google.com/humans.txt').then(content => console.log(content));
 ```
 
 ```javascript
-const {fetch} = require('raspar');
+const { fetch } = require('raspar');
 
 fetch([
     'http://www.google.com/humans.txt',
@@ -26,24 +26,26 @@ fetch([
 ### Options
 
 ```javascript
-const {fetch} = require('raspar');
+const { fetch } = require('raspar');
 
 const options = {
-    'cacheDirectory': 'temp/cache/',
-    'requestOptions': {
-        'headers': {
+    cacheDirectory: 'temp/cache/',
+    requestOptions: {
+        headers: {
             'User-Agent': 'request'
         },
-        'method': 'POST'
+        method: 'POST'
     },
-    'ttl': 1800
+    ttl: 1800
 };
 
-fetch('http://www.google.com/humans.txt', options).then(content => console.log(content));
+fetch('http://www.google.com/humans.txt', options).then(content =>
+    console.log(content)
+);
 ```
 
-| Name | Description | Default Value |
-| ---- | ----------- | ------------- |
-| cacheDirectory | Directory to store cache. | `temp/cache/` |
-| requestOptions | Request options object. [Read more github.com/request/request](https://github.com/request/request#requestoptions-callback) | `{}` |
-| ttl | TTL (Time to live) in seconds. | `1800` |
+| Name           | Description                                                                                                                | Default Value |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| cacheDirectory | Directory to store cache.                                                                                                  | `temp/cache/` |
+| requestOptions | Request options object. [Read more github.com/request/request](https://github.com/request/request#requestoptions-callback) | `{}`          |
+| ttl            | TTL (Time to live) in seconds.                                                                                             | `1800`        |

@@ -8,12 +8,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "mkdirp": "0.5.1",
-    "request": "2.88.0"
+    "mkdirp": "1.0.4",
+    "request": "2.88.2"
   },
   "devDependencies": {
     "del": "5.1.0",
-    "jest": "24.9.0"
+    "jest": "26.4.2"
   },
   "scripts": {
     "coverage": "jest --coverage --verbose=true",

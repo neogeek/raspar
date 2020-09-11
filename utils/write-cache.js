@@ -4,7 +4,7 @@ const { promisify } = require('util');
 
 const writeFile = promisify(fs.writeFile);
 
-const mkdirp = promisify(require('mkdirp'));
+const mkdirp = require('mkdirp');
 
 /**
  * Write cache contents to file. Will create directories if they don't exist.

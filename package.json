@@ -16,8 +16,11 @@
     "jest": "27.5.1"
   },
   "scripts": {
-    "coverage": "jest --coverage --verbose=true",
     "test": "jest --verbose=true"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testRegex": ".*.test.js$"
   },
   "keywords": [
     "request",

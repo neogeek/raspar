@@ -1,5 +1,13 @@
 # Changelog
 
+## [v3.0.0](https://github.com/neogeek/raspar/tree/v3.0.0) - (2022-03-05)
+
+[Full Changelog](https://github.com/neogeek/raspar/compare/v2.1.0...v3.0.0)
+
+- [feat] Swapped out request for node-fetch. [#75](https://github.com/neogeek/raspar/pull/75)
+- [feat] Added tsconfig.json [#74](https://github.com/neogeek/raspar/pull/74)
+- [feat] Removed mkdirp dependency. [#73](https://github.com/neogeek/raspar/pull/73)
+
 ## [v2.1.0](https://github.com/neogeek/raspar/tree/v2.1.0) - (2020-09-10)
 
 [Full Changelog](https://github.com/neogeek/raspar/compare/v2.0.0...v2.1.0)

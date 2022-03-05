@@ -44,8 +44,8 @@ fetch('http://www.google.com/humans.txt', options).then(content =>
 );
 ```
 
-| Name           | Description                                                                                                                | Default Value |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| cacheDirectory | Directory to store cache.                                                                                                  | `temp/cache/` |
-| requestOptions | Request options object. [Read more github.com/request/request](https://github.com/request/request#requestoptions-callback) | `{}`          |
-| ttl            | TTL (Time to live) in seconds.                                                                                             | `1800`        |
+| Name           | Description                                                                                                                     | Default Value |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| cacheDirectory | Directory to store cache.                                                                                                       | `temp/cache/` |
+| requestOptions | Request options object. [Read more github.com/node-fetch/node-fetch](https://github.com/node-fetch/node-fetch/tree/2.x#options) | `{}`          |
+| ttl            | TTL (Time to live) in seconds.                                                                                                  | `1800`        |

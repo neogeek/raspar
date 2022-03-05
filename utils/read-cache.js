@@ -7,7 +7,7 @@ const checkCacheExpiry = require('./check-cache-expiry');
  *
  * @example readCache('temp/cache.txt', 1800).then(contents => console.log(contents))
  * @param {String} path File path to read cache.
- * @param {Integer} ttl TTL (Time to live) in seconds.
+ * @param {Number} ttl TTL (Time to live) in seconds.
  * @return {Object} Promise
  * @public
  */

@@ -7,7 +7,7 @@ const MILLISECONDS = 1000;
  *
  * @example checkCacheExpiry('temp/cache.txt', 1800).catch(() => console.log('Cache has expired.'));
  * @param {String} path File path to check.
- * @param {Integer} ttl TTL (Time to live) in seconds.
+ * @param {Number} ttl TTL (Time to live) in seconds.
  * @return {Object} Promise
  * @public
  */

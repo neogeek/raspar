@@ -3,3 +3,7 @@
 coverage/
 
 tests/
+
+.prettierrc
+
+tsconfig.json

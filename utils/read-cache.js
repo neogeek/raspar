@@ -1,9 +1,6 @@
-const fs = require('fs');
-const { promisify } = require('util');
+const { promises: fs } = require('fs');
 
 const checkCacheExpiry = require('./check-cache-expiry');
-
-const readFile = promisify(fs.readFile);
 
 /**
  * Read cache from file only if cache hasn't expired.
@@ -16,6 +13,6 @@ const readFile = promisify(fs.readFile);
  */
 
 const readCache = (path, ttl) =>
-    checkCacheExpiry(path, ttl).then(() => readFile(path, 'utf8'));
+    checkCacheExpiry(path, ttl).then(() => fs.readFile(path, 'utf8'));
 
 module.exports = readCache;

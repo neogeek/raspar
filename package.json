@@ -1,7 +1,7 @@
 {
   "name": "raspar",
   "description": "A simple to use Promise-based web scraper with local caching.",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "index.js",
   "engines": {
     "node": ">=12.0"

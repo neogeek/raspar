@@ -8,10 +8,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "2.6.7"
+    "node-fetch": "3.3.2"
   },
   "devDependencies": {
-    "@types/node": "20.14.0"
+    "@types/node": "20.14.1"
   },
   "scripts": {
     "test": "node --test"

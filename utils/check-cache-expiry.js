@@ -1,4 +1,4 @@
-const { promises: fs } = require('fs');
+const fs = require('node:fs/promises');
 
 const MILLISECONDS = 1000;
 
@@ -13,14 +13,14 @@ const MILLISECONDS = 1000;
  */
 
 const checkCacheExpiry = (path, ttl) =>
-    fs.stat(path).then(stats => {
-        const ttlInMilliseconds = ttl * MILLISECONDS;
+  fs.stat(path).then(stats => {
+    const ttlInMilliseconds = ttl * MILLISECONDS;
 
-        if (new Date(stats.mtime).getTime() + ttlInMilliseconds < Date.now()) {
-            return Promise.reject(new Error('Cache has expired.'));
-        }
+    if (new Date(stats.mtime).getTime() + ttlInMilliseconds < Date.now()) {
+      return Promise.reject(new Error('Cache has expired.'));
+    }
 
-        return stats;
-    });
+    return stats;
+  });
 
 module.exports = checkCacheExpiry;

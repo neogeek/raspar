@@ -1,18 +1,18 @@
-import test, { beforeEach } from 'node:test';
+import test, { afterEach } from 'node:test';
 import assert from 'node:assert';
 
-import { utimesSync } from 'node:fs';
+import { unlink } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
-import readCache from './read-cache.js';
+import writeCache from './write-cache.js';
 
-const testFilePath = './test/mocks/cache.txt';
+const testFilePath = join(tmpdir(), 'temp.txt');
 
-beforeEach(() => {
-  const time = new Date();
-
-  utimesSync(testFilePath, time, time);
+afterEach(async () => {
+  await unlink(testFilePath);
 });
 
-test('Get contents of cached file', async () => {
-  assert.ok(/cache/.test(await readCache(testFilePath, 1800)));
+test('Write new cached file', async () => {
+  assert.ok(/temp/u.test(await writeCache(testFilePath, 'temp')));
 });

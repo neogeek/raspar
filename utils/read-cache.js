@@ -1,4 +1,4 @@
-const { promises: fs } = require('fs');
+const fs = require('node:fs/promises');
 
 const checkCacheExpiry = require('./check-cache-expiry');
 
@@ -13,6 +13,6 @@ const checkCacheExpiry = require('./check-cache-expiry');
  */
 
 const readCache = (path, ttl) =>
-    checkCacheExpiry(path, ttl).then(() => fs.readFile(path, 'utf8'));
+  checkCacheExpiry(path, ttl).then(() => fs.readFile(path, 'utf8'));
 
 module.exports = readCache;

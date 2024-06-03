@@ -1,8 +1,8 @@
 .github/
 
-coverage/
+test/
 
-tests/
+*.test.mjs
 
 .prettierrc
 

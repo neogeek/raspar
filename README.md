@@ -9,30 +9,17 @@
 ## Usage
 
 ```javascript
-import { fetch } from 'raspar';
+import fetch from 'raspar';
 
 const contents = await fetch('http://www.google.com/humans.txt');
 
 console.log(contents);
 ```
 
-```javascript
-import { fetch } from 'raspar';
-
-const multipleFetches = await fetch([
-  'http://www.google.com/humans.txt',
-  'http://www.google.com/robots.txt'
-]);
-
-multipleFetches.map(contents => {
-  console.log(contents);
-});
-```
-
 ### Options
 
 ```javascript
-import { fetch } from 'raspar';
+import fetch from 'raspar';
 
 const options = {
   cacheDirectory: 'temp/cache/',

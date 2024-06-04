@@ -9,24 +9,30 @@
 ## Usage
 
 ```javascript
-const { fetch } = require('raspar');
+import { fetch } from 'raspar';
 
-fetch('http://www.google.com/humans.txt').then(content => console.log(content));
+const contents = await fetch('http://www.google.com/humans.txt');
+
+console.log(contents);
 ```
 
 ```javascript
-const { fetch } = require('raspar');
+import { fetch } from 'raspar';
 
-fetch([
+const multipleFetches = await fetch([
   'http://www.google.com/humans.txt',
   'http://www.google.com/robots.txt'
-]).then(content => console.log(content[0]));
+]);
+
+multipleFetches.map(contents => {
+  console.log(contents);
+});
 ```
 
 ### Options
 
 ```javascript
-const { fetch } = require('raspar');
+import { fetch } from 'raspar';
 
 const options = {
   cacheDirectory: 'temp/cache/',
@@ -39,9 +45,9 @@ const options = {
   ttl: 1800
 };
 
-fetch('http://www.google.com/humans.txt', options).then(content =>
-  console.log(content)
-);
+const contents = await fetch('http://www.google.com/humans.txt', options);
+
+console.log(contents);
 ```
 
 | Name           | Description                                                                                                                     | Default Value |

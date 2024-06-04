@@ -3,6 +3,7 @@
   "description": "A simple to use Promise-based web scraper with local caching.",
   "version": "4.0.0",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "20.x"
   },

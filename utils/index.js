@@ -1,11 +1,6 @@
-const checkCacheExpiry = require('./check-cache-expiry');
-const generateUUID = require('./generate-uuid');
-const readCache = require('./read-cache');
-const writeCache = require('./write-cache');
+import checkCacheExpiry from './check-cache-expiry.js';
+import generateUUID from './generate-uuid.js';
+import readCache from './read-cache.js';
+import writeCache from './write-cache.js';
 
-module.exports = {
-  checkCacheExpiry,
-  generateUUID,
-  readCache,
-  writeCache
-};
+export { checkCacheExpiry, generateUUID, readCache, writeCache };

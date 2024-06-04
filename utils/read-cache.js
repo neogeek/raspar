@@ -1,6 +1,6 @@
-const fs = require('node:fs/promises');
+import { readFile } from 'node:fs/promises';
 
-const checkCacheExpiry = require('./check-cache-expiry');
+import checkCacheExpiry from './check-cache-expiry.js';
 
 /**
  * Read cache from file only if cache hasn't expired.
@@ -13,6 +13,6 @@ const checkCacheExpiry = require('./check-cache-expiry');
  */
 
 const readCache = (path, ttl) =>
-  checkCacheExpiry(path, ttl).then(() => fs.readFile(path, 'utf8'));
+  checkCacheExpiry(path, ttl).then(() => readFile(path, 'utf8'));
 
-module.exports = readCache;
+export default readCache;

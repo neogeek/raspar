@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.0.0](https://github.com/neogeek/raspar/tree/v5.0.0) - (2024-06-03)
+
+[Full Changelog](https://github.com/neogeek/raspar/compare/v4.0.0...v5.0.0)
+
+- [feat] Removed fetch from multiple URLs feature. [#84](https://github.com/neogeek/raspar/pull/84)
+- [hotfix] Converted package to a module. [#83](https://github.com/neogeek/raspar/pull/83)
+
 ## [v4.0.0](https://github.com/neogeek/raspar/tree/v4.0.0) - (2024-06-03)
 
 [Full Changelog](https://github.com/neogeek/raspar/compare/v3.0.2...v4.0.0)

@@ -1,4 +1,4 @@
-const fs = require('node:fs/promises');
+import { stat } from 'node:fs/promises';
 
 const MILLISECONDS = 1000;
 
@@ -13,7 +13,7 @@ const MILLISECONDS = 1000;
  */
 
 const checkCacheExpiry = (path, ttl) =>
-  fs.stat(path).then(stats => {
+  stat(path).then(stats => {
     const ttlInMilliseconds = ttl * MILLISECONDS;
 
     if (new Date(stats.mtime).getTime() + ttlInMilliseconds < Date.now()) {
@@ -23,4 +23,4 @@ const checkCacheExpiry = (path, ttl) =>
     return stats;
   });
 
-module.exports = checkCacheExpiry;
+export default checkCacheExpiry;

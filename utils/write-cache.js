@@ -1,5 +1,5 @@
-const fs = require('node:fs/promises');
-const { dirname } = require('node:path');
+import { mkdir, writeFile } from 'node:fs/promises';
+import { dirname } from 'node:path';
 
 /**
  * Write cache contents to file. Will create directories if they don't exist.
@@ -12,9 +12,8 @@ const { dirname } = require('node:path');
  */
 
 const writeCache = (path, content) =>
-  fs
-    .mkdir(dirname(path), { recursive: true })
-    .then(() => fs.writeFile(path, content))
+  mkdir(dirname(path), { recursive: true })
+    .then(() => writeFile(path, content))
     .then(() => content);
 
-module.exports = writeCache;
+export default writeCache;

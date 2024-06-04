@@ -1,4 +1,4 @@
-const crypto = require('node:crypto');
+import { createHash } from 'node:crypto';
 
 /**
  * Generate unique identifier from string.
@@ -10,6 +10,6 @@ const crypto = require('node:crypto');
  */
 
 const generateUUID = content =>
-  crypto.createHash('sha256').update(content).digest('hex');
+  createHash('sha256').update(content).digest('hex');
 
-module.exports = generateUUID;
+export default generateUUID;

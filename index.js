@@ -1,7 +1,4 @@
-const { fetch } = require('./lib/raspar');
-const utils = require('./utils/');
+import { fetch } from './lib/raspar.js';
+import * as utils from './utils/index.js';
 
-module.exports = {
-  fetch,
-  utils
-};
+export { fetch, utils };
